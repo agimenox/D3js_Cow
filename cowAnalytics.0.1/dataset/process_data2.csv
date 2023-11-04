@@ -1,0 +1,6 @@
+category,value,name
+AmbientBaselinePPM,200,ABPPM
+BaseAnimalPPM,200,BAPPM
+PeakAnimalPPM,200,PAPPM
+MethanePPMAmbient,200,MPPMA
+MethanePPMDelta,200,MPPMD

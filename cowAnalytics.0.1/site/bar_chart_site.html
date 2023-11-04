@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <!--<script src="js/index_chart.js"></script>-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>D3 with DS4E</title>
+</head>
+
+<body>
+    <!--  Nav Bar -->
+    <div w3-include-html="../pages/nav_bar.html"></div>
+
+    <!-- Container-->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left side window -->
+            <div class="col-md-3  text-secondary-emphasis bg-secondary-subtle border border-secondary-subtle ">
+               
+            </div>
+            <!-- Roght side window -->
+            <div class="col-md-9">
+
+                <!-- Bar Chart-->
+
+                <h2 class="text-center">Bar chart</h2>
+                <div class="col-md-12">
+
+                    <div class="col-md-12 ">
+                        <label for="startDate">Select Day Measure</label>
+                        <input id="startDate" class="form-control" type="date"
+                            onchange="total_ppm_per_day(this.value)" />
+                    </div>
+
+                    <div id="tooltip" class="hidden">
+                        <p><strong>Bar Value</strong></p>
+                        <p><span id="value">100</span></p>
+                    </div>
+                    <svg width="1000" height="600" id="chart1"></svg>
+
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+
+                        <div class="col-md-4 col-md-offset-2">
+                            <label for="startDate">Select Cow</label>
+                            <select id="cowValue" class="form-select" aria-label="Default select example">
+                                <option selected>Select Cow</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five</option>
+                                <option value="6">Six</option>
+                                <option value="7">Seven</option>
+                                <option value="8">Eight</option>
+                                <option value="9">Nine</option>
+                                <option value="10">Ten</option>
+                                <option value="11">Eleven</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-md-12 ">
+                                <label for="startDate">Select Day Measure</label>
+                                <input id="calendarBarCow" class="form-control" type="date" />
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-primary"
+                                onclick="total_ppm_per_cow()">Generate</button>
+                        </div>
+                    </div>
+
+                    <div id="tooltip" class="hidden">
+                        <p><strong>Bar Value</strong></p>
+                        <p><span id="value">100</span></p>
+                    </div>
+                    <svg width="1000" height="600" id="chart2"></svg>
+
+                </div>
+            </div>
+            <!-- Close Bar chart-->
+        </div>
+    </div>
+
+    <script src="../js/include_html.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/bar_chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        includeHTML();
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>
